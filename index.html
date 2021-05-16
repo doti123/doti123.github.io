@@ -1,112 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation nav</title>
-  <style>
-      .nav ul {
-    *zoom:1;
-    list-style:none;
-    margin:0;
-    padding:0;
-    background:rgb(3, 71, 25);
-}
-.nav ul:before,.nav ul:after {
-    content:"";
-    display:table;
-}
-.nav ul:after {
-    clear:both;
-}
-.nav ul > li {
-    float:left;
-    position:relative;
-}
-.nav a {
-    display:block;
-    padding:10px 20px;
-    line-height:1.2em;
-    color:#fff;
-    border-left:1px solid #595959;
-}
-.nav a:hover {
-    text-decoration:none;
-    background:#595959;
-}
-.nav li ul {
-    background:#273754;
-}
-.nav li ul li {
-    width:200px;
-}
-.nav li ul a {
-    border:none;
-}
-.nav li ul a:hover {
-    background:rgba(0,0,0,0.2);
-}
-.nav li ul {
-    position:absolute;
-    left:0;
-    top:36px;
-    z-index:1;
-}
-.nav li ul li {
-    overflow:hidden;
-    max-height:0;
-    -webkit-transition:max-height 500ms ease;
-    -moz-transition:max-height 500ms ease;
-    -o-transition:max-height 500ms ease;
-    transition:max-height 500ms ease;
-}
-.nav ul > li:hover ul li {
-    max-height:150px;
-}
-  </style>
+    <title>Document</title>
 </head>
 <body>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
-        nav {
-            background-color: rgba(61, 60, 60, 0.2);
-            font-family: "Zen Dots", cursive;
-            padding: 1rem;
-        }
-        #div_id {
-            background-color: rgba(0, 0, 255, 0.2);
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px; 
-            border-radius: 5px 10px 5px 10px;
+            @keyframes change {
+                0% {
+                    background-position: 0 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0 50%;
+                }
+            }  
+
+   
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .title {
+                width: 100%;
+                height: 20vh;
+                color: #fff;
+                background: linear-gradient(-25deg, #fbf81a,#17b80c,#d4320a
+                    
+                );
+                background-size: 400% 400%;
+                position: relative;
+                animation: change 10s ease-in-out infinite;
+            }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+        .profile_info {
             text-align: center;
         }
-    </style>
-
-
-    <nav class="nav">
-        <ul>
-            <li>
-                <a href="#">Scroll</a>
-                <ul>
-                    <li><a href="#">next time</a></li>
-                    <li><a href="#">next time</a></li>
-                    <li><a href="#">next time</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Nav Item</a>
-                <ul>
-                    <li><a href="#">Subnav Item</a></li>
-                    <li><a href="#">Subnav Item</a></li>
-                    <li><a href="#">Subnav Item</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
     
+        .profile_info .profile_img {
+            width: 12rem;
+            margin: 0 auto 5px;
+        }
+    
+        .profile_info .profile_img img {
+            width: 100%;
+            display: block;
+            border-radius: 50%;
+        }
+    
+        .profile_info .profile_data .name {
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-family: "Trade Winds";
+        }
+    
+
+    
+        .view_more_btn a {
+            display: block;
+            background-color: #cec820dc;
+            border: 1px solid #ffffff59;
+            box-shadow: 2.5px 2.5px 30px 0px rgb(230 230 230 / 46%);
+            color: black;
+            padding: 10px 15px;
+            width: 125px;
+            margin: 10px auto;
+            border-radius: 3px;
+           
+        }
+    
+        .view_more_btn a:link {
+            font-size: large;
+            text-decoration: white;
+}
+        .view_more_btn a:hover {
+            background: #2f1407;
+            color:whitesmoke;
+        }
+    
+     .title {
+            font-size: 4rem;
+            color: black;
+            margin-bottom: 15px;
+            text-align: center;
+            font-style: italic;
+        }
+
+</style>
+    <div class="title">Hello everyone
+    <div class="profile">
+    <div class="profile_info">    
+    <div class="profile_img">
+        <img src="/image/greenbrier-cast-revealed-01.jpg">
+</div>
+    <div class="profile_data">
+        <p class="name">Man with a hat</p>
+        <div class="view_more_btn">
+        <a href="sekantis.html">About</a>
+        </div>
+
+    </div>
 </body>
 </html>
